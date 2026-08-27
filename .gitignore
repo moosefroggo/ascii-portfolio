@@ -1,0 +1,6 @@
+.vercel
+.DS_Store
+
+# Local source material is not part of the public portfolio site.
+case-material/
+demos/

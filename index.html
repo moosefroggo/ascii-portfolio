@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mustafa@dev ~ design engineering</title>
+<meta name="description" content="Design engineering work by Mustafa — interfaces, experiments, and tools."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;0,800;1,400&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23060807'/><rect x='30' y='18' width='42' height='64' fill='%233df08a'/></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══ TOP BAR ══ -->
+<nav class="topbar">
+  <a class="path" href="#top">mustafa@dev<span class="dim">:~$</span><span class="caret small">█</span></a>
+  <div class="links">
+    <a href="#projects" data-scramble>./projects</a>
+    <a href="#about" data-scramble>./about</a>
+    <a href="#contact" data-scramble>./contact</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<header class="hero" id="top">
+  <canvas id="ascii" aria-hidden="true"></canvas>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <h1 class="hero-heading">Mustafa</h1>
+    <p class="tagline">creative developer · side projects, toys &amp; tools</p>
+  </div>
+  <a class="scroll-hint" href="#projects">▽ scroll</a>
+</header>
+
+<main>
+
+  <!-- ══ PROJECTS INDEX — ls -la menu ══ -->
+  <section id="projects" class="section">
+    <pre class="sec-banner reveal" aria-label="PROJECTS">  ___ ___  ___     _ ___ ___ _____ ___
+ | _ \ _ \/ _ \ _ | | __/ __|_   _/ __|
+ |  _/   / (_) | || | _| (__  | | \__ \
+ |_| |_|_\\___/ \__/|___\___| |_| |___/</pre>
+    <p class="cmd reveal"><span class="prompt">mustafa@dev:~$</span> ls -la ~/projects</p>
+    <p class="cmd-out dim reveal">total 7 — 7 directories. select one to open ↓</p>
+
+    <div class="ls-menu reveal">
+      <!-- ✏️ EDIT: project menu rows -->
+      <a class="ls-row" href="#p-agentic-trading">
+        <span class="perm dim">drwxr-xr-x</span><span class="num dim">01</span>
+        <span class="name" data-scramble>agentic-trading</span>
+        <span class="lang dim">next.js</span><span class="stat">Work</span>
+      </a>
+      <a class="ls-row" href="#p-recruitment-platform">
+        <span class="perm dim">drwxr-xr-x</span><span class="num dim">02</span>
+        <span class="name" data-scramble>recruitment-platform</span>
+        <span class="lang dim">react</span><span class="stat">Work</span>
+      </a>
+      <a class="ls-row" href="#p-git-visualizations">
+        <span class="perm dim">drwxr-xr-x</span><span class="num dim">03</span>
+        <span class="name" data-scramble>git-visualizations</span>
+        <span class="lang dim">three.js · gsap · css</span><span class="stat">Work</span>
+      </a>
+      <a class="ls-row" href="#p-edtech-product-animations">
+        <span class="perm dim">drwxr-xr-x</span><span class="num dim">04</span>
+        <span class="name" data-scramble>edtech-product-animations</span>
+        <span class="lang dim">canvas · css</span><span class="stat">Work</span>
+      </a>
+      <a class="ls-row" href="#p-2b-portfolio-generator">
+        <span class="perm dim">drwxr-xr-x</span><span class="num dim">05</span>
+        <span class="name" data-scramble>2b-portfolio-generator</span>
+        <span class="lang dim">react</span><span class="stat">Work</span>
+      </a>
+      <a class="ls-row" href="#p-vc-job-board">
+        <span class="perm dim">drwxr-xr-x</span><span class="num dim">06</span>
+        <span class="name" data-scramble>vc-job-board</span>
+        <span class="lang dim">react</span><span class="stat personal">Personal</span>
+      </a>
+      <a class="ls-row" href="#p-3d-gradients-generator">
+        <span class="perm dim">drwxr-xr-x</span><span class="num dim">07</span>
+        <span class="name" data-scramble>3d-gradients-generator</span>
+        <span class="lang dim">three.js · glsl</span><span class="stat personal">Personal</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══ INTERLUDE — scroll-scrubbed ASCII word morph ══ -->
+  <section class="interlude" id="interlude" aria-label="Interlude">
+    <div class="interlude-sticky">
+      <canvas id="word-canvas" aria-hidden="true"></canvas>
+      <p class="interlude-count" id="word-count" aria-hidden="true">01 / 04</p>
+      <p class="interlude-hint dim">// keep scrolling — the characters obey</p>
+    </div>
+  </section>
+
+  <!-- ══ PROJECT EXPERIENCES — each one a full-screen living ASCII scene ══ -->
+
+  <section class="project" id="p-agentic-trading" data-fx="graph" data-url="https://vantheon-architecture.vercel.app">
+    <canvas class="p-fx" aria-hidden="true"></canvas>
+    <div class="p-shade" aria-hidden="true"></div>
+    <span class="pc tl">+</span><span class="pc tr">+</span><span class="pc bl">+</span><span class="pc br">+</span>
+    <p class="p-index" aria-hidden="true">01</p>
+    <div class="p-inner">
+      <p class="cmd"><span class="prompt">mustafa@dev:~$</span> ./open agentic-trading</p>
+      <h3 class="p-title" data-scramble>AGENTIC TRADING</h3>
+      <p class="p-desc">Next.js frontend for an agentic trading application.</p>
+      <ul class="tags"><li>next.js</li></ul>
+      <p class="p-meta">
+        <span class="status client"><span class="spinner" aria-hidden="true"></span>Work</span>
+        <a href="https://github.com/moosefroggo/vantheon-architecture" target="_blank" rel="noopener">source ↗</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="project" id="p-recruitment-platform" data-fx="path" data-url="https://nectar-social-prototype.vercel.app">
+    <canvas class="p-fx" aria-hidden="true"></canvas>
+    <div class="p-shade" aria-hidden="true"></div>
+    <span class="pc tl">+</span><span class="pc tr">+</span><span class="pc bl">+</span><span class="pc br">+</span>
+    <p class="p-index" aria-hidden="true">02</p>
+    <div class="p-inner">
+      <p class="cmd"><span class="prompt">mustafa@dev:~$</span> ./open recruitment-platform</p>
+      <h3 class="p-title" data-scramble>RECRUITMENT PLATFORM FOR TOP 0.1% CANDIDATES</h3>
+      <p class="p-desc">Signals-driven agentic recruitment platform that finds candidates who never apply.</p>
+      <ul class="tags"><li>react</li></ul>
+      <p class="p-meta">
+        <span class="status client"><span class="spinner" aria-hidden="true"></span>Work</span>
+        <a href="https://github.com/moosefroggo/pathline" target="_blank" rel="noopener">source ↗</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="project" id="p-git-visualizations" data-fx="city" data-url="https://nextwork-all-animations-consolidate.vercel.app">
+    <canvas class="p-fx" aria-hidden="true"></canvas>
+    <div class="p-shade" aria-hidden="true"></div>
+    <span class="pc tl">+</span><span class="pc tr">+</span><span class="pc bl">+</span><span class="pc br">+</span>
+    <p class="p-index" aria-hidden="true">03</p>
+    <div class="p-inner">
+      <p class="cmd"><span class="prompt">mustafa@dev:~$</span> ./open git-visualizations</p>
+      <h3 class="p-title" data-scramble>GIT VISUALIZATIONS</h3>
+      <p class="p-desc">Git workflow visualization explored through motion with Three.js and CSS.</p>
+      <ul class="tags"><li>three.js</li><li>gsap</li><li>css</li></ul>
+      <p class="p-meta">
+        <span class="status client"><span class="spinner" aria-hidden="true"></span>Work</span>
+        <a href="https://github.com/moosefroggo/nextwork-all-animations" target="_blank" rel="noopener">source ↗</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="project" id="p-edtech-product-animations" data-fx="hole" data-url="https://pseudoconverter.vercel.app">
+    <canvas class="p-fx" aria-hidden="true"></canvas>
+    <div class="p-shade" aria-hidden="true"></div>
+    <span class="pc tl">+</span><span class="pc tr">+</span><span class="pc bl">+</span><span class="pc br">+</span>
+    <p class="p-index" aria-hidden="true">04</p>
+    <div class="p-inner">
+      <p class="cmd"><span class="prompt">mustafa@dev:~$</span> ./open edtech-product-animations</p>
+      <h3 class="p-title" data-scramble>EDTECH PRODUCT ANIMATIONS</h3>
+      <p class="p-desc">Adding micro-interactions and delights to learner experience.</p>
+      <ul class="tags"><li>canvas</li><li>css</li></ul>
+      <p class="p-meta">
+        <span class="status client"><span class="spinner" aria-hidden="true"></span>Work</span>
+        <a href="https://github.com/moosefroggo/design-demo" target="_blank" rel="noopener">source ↗</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="project" id="p-2b-portfolio-generator" data-fx="bands" data-url="https://nextwork-portfolio-themes.vercel.app">
+    <canvas class="p-fx" aria-hidden="true"></canvas>
+    <div class="p-shade" aria-hidden="true"></div>
+    <span class="pc tl">+</span><span class="pc tr">+</span><span class="pc bl">+</span><span class="pc br">+</span>
+    <p class="p-index" aria-hidden="true">05</p>
+    <div class="p-inner">
+      <p class="cmd"><span class="prompt">mustafa@dev:~$</span> ./open 2b-portfolio-generator</p>
+      <h3 class="p-title" data-scramble>2B PORTFOLIO GENERATOR</h3>
+      <p class="p-desc">A portfolio theme generator capable of over 2 billion combinations for a fast-growing ed-tech startup.</p>
+      <ul class="tags"><li>react</li></ul>
+      <p class="p-meta">
+        <span class="status client"><span class="spinner" aria-hidden="true"></span>Work</span>
+        <a href="https://github.com/moosefroggo/theme-engine" target="_blank" rel="noopener">source ↗</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="project" id="p-vc-job-board" data-fx="rain" data-url="https://vc-jobs.vercel.app">
+    <canvas class="p-fx" aria-hidden="true"></canvas>
+    <div class="p-shade" aria-hidden="true"></div>
+    <span class="pc tl">+</span><span class="pc tr">+</span><span class="pc bl">+</span><span class="pc br">+</span>
+    <p class="p-index" aria-hidden="true">06</p>
+    <div class="p-inner">
+      <p class="cmd"><span class="prompt">mustafa@dev:~$</span> ./open vc-job-board</p>
+      <h3 class="p-title" data-scramble>VC JOB BOARD</h3>
+      <p class="p-desc">A board that syncs active roles from 17 VC boards, with the list updated every 24 hours.</p>
+      <ul class="tags"><li>react</li></ul>
+      <p class="p-meta">
+        <span class="status personal"><span class="spinner" aria-hidden="true"></span>Personal</span>
+        <a href="https://github.com/moosefroggo/vc-jobs" target="_blank" rel="noopener">source ↗</a>
+        <a href="https://vc-jobs.vercel.app" target="_blank" rel="noopener">live ↗</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="project" id="p-3d-gradients-generator" data-fx="mirror" data-url="https://moosefroggo.github.io/3d-gradients-generator/">
+    <canvas class="p-fx" aria-hidden="true"></canvas>
+    <div class="p-shade" aria-hidden="true"></div>
+    <span class="pc tl">+</span><span class="pc tr">+</span><span class="pc bl">+</span><span class="pc br">+</span>
+    <p class="p-index" aria-hidden="true">07</p>
+    <div class="p-inner">
+      <p class="cmd"><span class="prompt">mustafa@dev:~$</span> ./open 3d-gradients-generator</p>
+      <h3 class="p-title" data-scramble>3D GRADIENT GENERATOR</h3>
+      <p class="p-desc">WebGL and Three.js gradients that react to physics and their environment.</p>
+      <ul class="tags"><li>three.js</li><li>glsl</li></ul>
+      <p class="p-meta">
+        <span class="status personal"><span class="spinner" aria-hidden="true"></span>Personal</span>
+      </p>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true">
+    <div class="divider-track">+==[ EOF projects/ ]==+ ░▒▓█ 7 objects, 7 worlds █▓▒░ +==[ EOF projects/ ]==+ ░▒▓█ 7 objects, 7 worlds █▓▒░ +==[ EOF projects/ ]==+ ░▒▓█ 7 objects, 7 worlds █▓▒░ +==[ EOF projects/ ]==+ ░▒▓█ 7 objects, 7 worlds █▓▒░ </div>
+  </div>
+
+  <!-- ══ ABOUT ══ -->
+  <section id="about" class="section">
+    <pre class="sec-banner reveal" aria-label="ABOUT">    _   ___  ___  _   _ _____
+   /_\ | _ )/ _ \| | | |_   _|
+  / _ \| _ \ (_) | |_| | | |
+ /_/ \_\___/\___/ \___/  |_|</pre>
+    <p class="cmd reveal"><span class="prompt">mustafa@dev:~$</span> cat about.md</p>
+    <p id="about-text" class="about-text" data-text="I'm Mustafa, a design engineer building interfaces, tools, and experiments."></p>
+
+    <p class="cmd reveal" style="margin-top:3rem"><span class="prompt">mustafa@dev:~$</span> ls ~/skills</p>
+    <div class="skills reveal">
+      <span>typescript/</span><span>webgl/</span><span>three.js/</span><span>creative-coding/</span><span>cli-tools/</span><span>shaders/</span><span>python/</span><span>rust/</span>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true">
+    <div class="divider-track rev">01001000 01000101 01001100 01001100 01001111 · HELLO FROM THE WIRE · 01001000 01000101 01001100 01001100 01001111 · HELLO FROM THE WIRE · 01001000 01000101 01001100 01001100 01001111 · </div>
+  </div>
+
+  <!-- ══ CONTACT ══ -->
+  <section id="contact" class="section">
+    <pre class="sec-banner reveal" aria-label="CONTACT">   ___ ___  _  _ _____ _   ___ _____
+  / __/ _ \| \| |_   _/_\ / __|_   _|
+ | (_| (_) | .` | | |/ _ \ (__  | |
+  \___\___/|_|\_| |_/_/ \_\___| |_|</pre>
+    <p class="cmd-out dim reveal">Connection established. Channels open:</p>
+    <div class="contact-links reveal">
+      <a href="mailto:hello@mstf.work" data-scramble>✉ hello@mstf.work</a>
+      <a href="https://github.com/moosefroggo" target="_blank" rel="noopener" data-scramble>⌥ github.com/moosefroggo</a>
+      <a href="https://mstf.work" target="_blank" rel="noopener" data-scramble>↗ mstf.work</a>
+    </div>
+
+    <div class="ai-tooling reveal">
+      <h3 class="tooling-title">AI TOOLING</h3>
+      <p class="cmd"><span class="prompt">mustafa@dev:~$</span> cat ai-tooling.md</p>
+      <div class="tool-list">
+        <div><span class="tool-label">harness</span><strong>pi</strong></div>
+        <div><span class="tool-label">complex work</span><strong>GPT Sol Terra 5.6 · Kimi V3 Max</strong></div>
+        <div><span class="tool-label">everyday work</span><strong>Sonnet 4.5</strong></div>
+        <div><span class="tool-label">basic work</span><strong>Gemini Flash 2.5</strong></div>
+        <div><span class="tool-label">3D</span><strong>Meshy</strong></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══ STATUS BAR ══ -->
+<div class="statusbar" aria-hidden="true">
+  <span class="st-spacer"></span>
+  <span>UTF-8</span>
+  <span id="clock">00:00:00</span>
+</div>
+
+<div class="crt" aria-hidden="true"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
